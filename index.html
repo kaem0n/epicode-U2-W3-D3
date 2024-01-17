@@ -21,6 +21,10 @@
         font-family: 'Salsa', cursive;
         color: brown;
       }
+
+      #cart1 {
+        min-width: 200px;
+      }
     </style>
   </head>
   <body class="d-flex flex-column vh-100">
@@ -128,28 +132,21 @@
                 <i class="bi bi-cart2 me-2"></i>
                 Shopping Cart
               </p>
-              <a href="#" class="list-group-item list-group-item-action"
-                >A second link item</a
-              >
-              <a href="#" class="list-group-item list-group-item-action"
-                >A third link item</a
-              >
-              <a href="#" class="list-group-item list-group-item-action"
-                >A fourth link item</a
-              >
             </div>
           </div>
         </div>
       </nav>
     </header>
-    <main class="flex-grow-1">
-      <div class="container-fluid h-100">
-        <div class="row h-100 flex-column flex-lg-row">
+    <main>
+      <div class="container-fluid">
+        <div class="row flex-column flex-lg-row">
           <section class="col-12 col-lg-2 border-end order-2 order-lg-1">
-            <h5 class="mb-2 mt-5 mt-lg-1">Categories</h5>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col d-flex flex-lg-column flex-wrap">
+            <div class="container-fluid sticky-top my-5 mt-lg-1 mb-lg-0">
+              <h5 class="mb-2">Categories</h5>
+              <div class="row ps-lg-2">
+                <div
+                  class="col d-flex flex-lg-column flex-wrap align-items-start"
+                >
                   <a
                     href="#"
                     class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"

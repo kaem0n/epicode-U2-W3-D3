@@ -87,7 +87,7 @@ const addToCart = function (event) {
           <div class="me-5">
             <img
               src="${books[i].img}"
-              alt="dog"
+              alt="${books[i].asin}"
               height="50px"
             />
             <span class="fw-semibold">${bookTitle}</span>
@@ -104,7 +104,7 @@ const addToCart = function (event) {
           <div class="me-5">
             <img
               src="${books[i].img}"
-              alt="dog"
+              alt="${books[i].asin}"
               height="50px"
             />
             <span class="fw-semibold">${bookTitle}</span>
