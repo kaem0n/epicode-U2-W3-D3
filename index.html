@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>U2-W3-D3 - Antonio Ruggia Piquer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+      #logo {
+        font-family: 'Salsa', cursive;
+        color: brown;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column vh-100">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <div id="logo" class="fw-bold d-flex align-items-center fs-3">
+              <i class="bi bi-book me-2"></i>
+              Bookshelf
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Genres</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gift Cards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help & Support</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-dark" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+            <ul class="navbar-nav mb-2 ms-3 mb-lg-0 d-none d-lg-flex">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle p-0"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-cart2 fs-2"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" id="cart1">
+                  <li class="dropdown-item-text fw-semibold fs-5">
+                    Shopping Cart
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li
+                    class="dropdown-item-text fw-semibold text-center"
+                    id="empty"
+                  >
+                    <p class="text-secondary m-0">Cart is empty.</p>
+                  </li>
+                  <!-- <li class="dropdown-item" href="#">
+                    <div
+                      class="item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="me-5">
+                        <img
+                          src="https://placedog.net/50/50"
+                          alt="dog"
+                          height="50px"
+                        />
+                        <span class="fw-semibold"
+                          >Pandemic (The Extinction Files, Book 1)</span
+                        >
+                      </div>
+                      <a href="#" class="text-danger">
+                        <i class="bi bi-trash3 fs-5"></i>
+                      </a>
+                    </div>
+                  </li> -->
+                  <!-- <li><hr class="dropdown-divider" /></li>
+                  <li class="dropdown-item-text text-end">
+                    <button class="btn btn-dark btn-lg fw-semibold">
+                      Proceed
+                    </button>
+                  </li> -->
+                </ul>
+              </li>
+            </ul>
+            <div class="list-group d-lg-none mt-2" id="cart2">
+              <p class="list-group-item m-0 fw-semibold fs-3">
+                <i class="bi bi-cart2 me-2"></i>
+                Shopping Cart
+              </p>
+              <a href="#" class="list-group-item list-group-item-action"
+                >A second link item</a
+              >
+              <a href="#" class="list-group-item list-group-item-action"
+                >A third link item</a
+              >
+              <a href="#" class="list-group-item list-group-item-action"
+                >A fourth link item</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="flex-grow-1">
+      <div class="container-fluid h-100">
+        <div class="row h-100 flex-column flex-lg-row">
+          <section class="col-12 col-lg-2 border-end order-2 order-lg-1">
+            <h5 class="mb-2 mt-5 mt-lg-1">Categories</h5>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col d-flex flex-lg-column flex-wrap">
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Arts & Music</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Biographies</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Business</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Comics</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Computers & Tech</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Cooking</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Education</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Entertainment</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Fitness</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Health</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >History</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Hobbies & Crafts</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Home & Garden</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Horror</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Kids</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Literature & Fiction</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Medical</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Mysteries</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Parenting</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Religion</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Romance</a
+                  >
+                  <a href="#" class="mb-1 me-3 text-dark fw-semibold"
+                    >Sci-Fi & Fantasy</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Science & Math</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Self-help</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Social Sciences</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Sports</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Teen</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Travel</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >True Crime</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Westerns</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="col-12 col-lg-10 order-1 order-lg-2"
+            id="main-section"
+          >
+            <div
+              class="h-100 d-flex flex-column align-items-center justify-content-center"
+              id="spinner"
+            >
+              <div class="spinner-border text-secondary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div
+                class="row row-cols-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-3 pt-3"
+                id="card-container"
+              ></div>
+              <!-- <div class="col">
+                <div class="card">
+                  <img
+                    src="https://placedog.net/300/400"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Book title</h5>
+                    <p class="card-text">
+                      <span class="fw-semibold me-1">Price:</span> 5.00$
+                    </p>
+                    <a href="#" class="btn btn-secondary fw-semibold"
+                      >Add to Cart</a
+                    >
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
