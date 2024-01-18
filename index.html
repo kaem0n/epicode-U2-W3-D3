@@ -23,12 +23,17 @@
       }
 
       #cart1 {
-        min-width: 200px;
+        min-width: 400px;
+      }
+
+      .dropdown-menu {
+        --bs-dropdown-link-active-bg: #dee2e6;
+        --bs-dropdown-link-active-color: black;
       }
     </style>
   </head>
-  <body class="d-flex flex-column vh-100">
-    <header>
+  <body>
+    <header class="sticky-top">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -84,53 +89,55 @@
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
+                  data-bs-auto-close="false"
                   aria-expanded="false"
                 >
                   <i class="bi bi-cart2 fs-2"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" id="cart1">
-                  <li class="dropdown-item-text fw-semibold fs-5">
-                    Shopping Cart
+                  <li
+                    class="dropdown-item-text fw-semibold fs-5 d-flex justify-content-between align-items-center"
+                  >
+                    <span>Shopping Cart</span>
+                    <button
+                      class="btn btn-sm btn-success"
+                      id="confirm1"
+                      disabled
+                    >
+                      Proceed
+                    </button>
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li
                     class="dropdown-item-text fw-semibold text-center"
-                    id="empty"
+                    id="empty1"
                   >
                     <p class="text-secondary m-0">Cart is empty.</p>
                   </li>
-                  <!-- <li class="dropdown-item" href="#">
-                    <div
-                      class="item d-flex justify-content-between align-items-center"
-                    >
-                      <div class="me-5">
-                        <img
-                          src="https://placedog.net/50/50"
-                          alt="dog"
-                          height="50px"
-                        />
-                        <span class="fw-semibold"
-                          >Pandemic (The Extinction Files, Book 1)</span
-                        >
-                      </div>
-                      <a href="#" class="text-danger">
-                        <i class="bi bi-trash3 fs-5"></i>
-                      </a>
-                    </div>
-                  </li> -->
-                  <!-- <li><hr class="dropdown-divider" /></li>
-                  <li class="dropdown-item-text text-end">
-                    <button class="btn btn-dark btn-lg fw-semibold">
-                      Proceed
-                    </button>
-                  </li> -->
                 </ul>
               </li>
             </ul>
             <div class="list-group d-lg-none mt-2" id="cart2">
-              <p class="list-group-item m-0 fw-semibold fs-3">
-                <i class="bi bi-cart2 me-2"></i>
-                Shopping Cart
+              <div
+                class="list-group-item m-0 fw-semibold fs-3 d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <i class="bi bi-cart2 me-2"></i> <span>Shopping Cart</span>
+                </div>
+
+                <button
+                  class="btn btn-lg btn-success fw-semibold"
+                  id="confirm2"
+                  disabled
+                >
+                  Proceed
+                </button>
+              </div>
+              <p
+                class="list-group-item text-secondary fw-semibold text-center m-0 fs-5"
+                id="empty2"
+              >
+                Cart is empty.
               </p>
             </div>
           </div>
@@ -141,7 +148,7 @@
       <div class="container-fluid">
         <div class="row flex-column flex-lg-row">
           <section class="col-12 col-lg-2 border-end order-2 order-lg-1">
-            <div class="container-fluid sticky-top my-5 mt-lg-1 mb-lg-0">
+            <div class="container-fluid my-5 mt-lg-1 mb-lg-0">
               <h5 class="mb-2">Categories</h5>
               <div class="row ps-lg-2">
                 <div
@@ -186,6 +193,11 @@
                     href="#"
                     class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
                     >Entertainment</a
+                  >
+                  <a
+                    href="#"
+                    class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
+                    >Fantasy</a
                   >
                   <a
                     href="#"
@@ -252,9 +264,7 @@
                     class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
                     >Romance</a
                   >
-                  <a href="#" class="mb-1 me-3 text-dark fw-semibold"
-                    >Sci-Fi & Fantasy</a
-                  >
+                  <a href="#" class="mb-1 me-3 text-dark fw-semibold">Sci-Fi</a>
                   <a
                     href="#"
                     class="link-underline link-underline-opacity-0 mb-1 me-3 text-dark"
